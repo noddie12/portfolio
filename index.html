@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Do Hai Anh - Beyond the Reef</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Floating ocean canvases -->
+  <canvas id="bubbleCanvas" class="bubble-canvas" aria-hidden="true"></canvas>
+  <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+  <!-- Dynamic caustic light blobs (CSS animated) -->
+  <div class="caustic-blob caustic-blob--c" aria-hidden="true"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner container">
+      <a class="nav__logo" href="#hero">DHA</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#awards">Achievements</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <!-- Sunlight and caustic effects -->
+    <div class="hero__caustic" aria-hidden="true"></div>
+    <div class="hero__shaft hero__shaft--a" aria-hidden="true"></div>
+    <div class="hero__shaft hero__shaft--b" aria-hidden="true"></div>
+    <div class="hero__shaft hero__shaft--c" aria-hidden="true"></div>
+
+    <div class="hero__inner container">
+      <div class="hero__text fade-up">
+        <span class="hero__eyebrow">BEYOND THE REEF</span>
+        <h1 class="hero__name">DO HAI ANH</h1>
+        <p class="hero__subtitle">International Business Economics student - Researcher - Project &amp; strategy enthusiast</p>
+        <blockquote class="hero__tagline">"Starting small, dreaming wide, and swimming beyond the familiar."</blockquote>
+        <p class="hero__support">A portfolio of growth, learning, leadership, and impact.</p>
+        <div class="hero__cta">
+          <a href="#about" class="btn btn--primary">View my journey</a>
+          <a href="cv.pdf" class="btn btn--outline" download="Do_Hai_Anh_CV.pdf" target="_blank">Download CV</a>
+        </div>
+        <p class="hero__caption">From the shore of curiosity to the ocean of opportunity.</p>
+      </div>
+
+      <div class="hero__portrait fade-up" style="--delay:.22s">
+        <div class="hero__portrait-halo" aria-hidden="true"></div>
+        <div class="hero__portrait-frame">
+          <div class="hero__portrait-img-wrap">
+            <img src="images/portrait-main.jpg" alt="Do Hai Anh portrait" class="hero__portrait-img" id="heroImg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Soft wave transition -->
+    <div class="hero__wave-out" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="rgba(140,207,232,0.08)"/>
+        <path d="M0,60 C480,20 960,75 1440,55 L1440,80 L0,80 Z" fill="rgba(90,160,185,0.05)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section--shallow" id="about">
+    <div class="container">
+      <span class="section-label fade-up">ABOUT ME</span>
+      <h2 class="section-title fade-up">The beginning of the journey</h2>
+
+      <div class="about__grid">
+        <div class="about__text fade-up">
+          <p class="about__lead">I am an International Business Economics student at Foreign Trade University, driven by curiosity, discipline, and a desire to create meaningful impact.</p>
+          <p>Through academic research, business competitions, internships, and social entrepreneurship, I have been exploring how ideas can be turned into action. I believe every challenge is an invitation to grow, every collaboration a chance to learn something new.</p>
+          <p>I see every experience as part of a larger journey - one that helps me grow beyond the familiar and navigate toward deeper horizons.</p>
+          <div class="about__values">
+            <span class="chip">Curious</span>
+            <span class="chip">Disciplined</span>
+            <span class="chip">Impact-driven</span>
+            <span class="chip">Strategic</span>
+            <span class="chip">Collaborative</span>
+          </div>
+        </div>
+
+        <div class="about__visual-card fade-up" style="--delay:.18s">
+          <div class="about__card glass-card">
+            <div class="about__card-bar"></div>
+            <div class="about__info-grid">
+              <div class="about__info-item">
+                <span class="about__info-label">University</span>
+                <span class="about__info-value">Foreign Trade University</span>
+              </div>
+              <div class="about__info-item">
+                <span class="about__info-label">Major</span>
+                <span class="about__info-value">International Business Economics</span>
+              </div>
+              <div class="about__info-item">
+                <span class="about__info-label">GPA</span>
+                <span class="about__info-value about__info-value--hi">3.96 <small>/ 4.0</small></span>
+              </div>
+              <div class="about__info-item">
+                <span class="about__info-label">Location</span>
+                <span class="about__info-value">Hanoi, Vietnam</span>
+              </div>
+              <div class="about__info-item">
+                <span class="about__info-label">IELTS</span>
+                <span class="about__info-value">7.0</span>
+              </div>
+              <div class="about__info-item">
+                <span class="about__info-label">Focus</span>
+                <span class="about__info-value about__info-value--hi">Strategy &amp; Social Impact</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <section class="section section--shallow" id="metrics">
+    <div class="container">
+      <span class="section-label fade-up">QUICK SNAPSHOT</span>
+      <h2 class="section-title fade-up">A glimpse beneath the surface</h2>
+
+      <div class="metrics__bento">
+        <!-- 7 items only -->
+        <div class="metric-card glass-card fade-up" style="--delay:.00s">
+          <div class="metric-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="18" height="18"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="metric-card__val">
+            <span class="metric-card__num" data-target="3.96" data-decimal="2">0</span><span class="metric-card__suffix">&thinsp;/ 4.0</span>
+          </div>
+          <p class="metric-card__label">GPA</p>
+        </div>
+
+        <div class="metric-card glass-card fade-up" style="--delay:.06s">
+          <div class="metric-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="18" height="18"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <div class="metric-card__val">
+            <span class="metric-card__num" data-target="2">0</span>
+          </div>
+          <p class="metric-card__label">Publications</p>
+        </div>
+
+        <div class="metric-card glass-card fade-up" style="--delay:.12s">
+          <div class="metric-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="18" height="18"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <div class="metric-card__val">
+            <span class="metric-card__num" data-target="4">0</span><span class="metric-card__suffix">&times;</span>
+          </div>
+          <p class="metric-card__label">Champion titles</p>
+        </div>
+
+        <div class="metric-card glass-card fade-up" style="--delay:.18s">
+          <div class="metric-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="18" height="18"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <div class="metric-card__val">
+            <span class="metric-card__num" data-target="2">0</span>
+          </div>
+          <p class="metric-card__label">Internships</p>
+        </div>
+
+        <div class="metric-card glass-card fade-up" style="--delay:.24s">
+          <div class="metric-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <div class="metric-card__val">
+            <span class="metric-card__num metric-card__num--static">7.0</span>
+          </div>
+          <p class="metric-card__label">IELTS score</p>
+        </div>
+
+        <div class="metric-card glass-card fade-up" style="--delay:.30s">
+          <div class="metric-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="18" height="18"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="metric-card__val">
+            <span class="metric-card__num" data-target="3">0</span>
+          </div>
+          <p class="metric-card__label">Scholarships</p>
+        </div>
+
+        <div class="metric-card glass-card metric-card--highlight fade-up" style="--delay:.36s">
+          <div class="metric-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="18" height="18"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="metric-card__val">
+            <span class="metric-card__num metric-card__num--static">600M+</span>
+          </div>
+          <p class="metric-card__label">VND revenue led</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section section--shallow" id="education">
+    <div class="container">
+      <span class="section-label fade-up">EDUCATION &amp; ACADEMIC FOUNDATION</span>
+      <h2 class="section-title fade-up">First waters</h2>
+
+      <div class="edu__grid">
+        <div class="glass-card edu__card edu__card--primary fade-up">
+          <div class="edu__card-header">
+            <div class="edu__logo-orb">
+              <svg viewBox="0 0 32 32" fill="none" width="28" height="28"><circle cx="16" cy="16" r="16" fill="#3F7087" opacity="0.12"/><path d="M16 8l10 5v5l-10 5-10-5v-5l10-5z" fill="#3F7087" opacity="0.5"/><path d="M6 18v5" stroke="#3F7087" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h3 class="edu__school">Foreign Trade University</h3>
+              <p class="edu__degree">Bachelor of International Business Economics</p>
+              <p class="edu__period">Sep 2023 - Jan 2027</p>
+            </div>
+          </div>
+          <div class="edu__stats">
+            <div class="edu__stat">
+              <span class="edu__stat-val">3.96<span class="edu__stat-sub"> / 4.0</span></span>
+              <span class="edu__stat-lbl">Cumulative GPA (9.30/10.00)</span>
+            </div>
+          </div>
+          <p class="edu__summary">Built a rigorous academic foundation in international trade, business strategy, econometrics, corporate finance, and commercial transactions at Vietnam's premier foreign trade institution.</p>
+
+          <div class="edu__training-box">
+            <div class="edu__training-header">
+              <div class="edu__training-logo">
+                <svg viewBox="0 0 28 28" fill="none" width="22" height="22"><rect width="28" height="28" rx="5" fill="#0078D4" opacity="0.12"/><path d="M6 14h4l3-7 4 14 3-7h4" stroke="#0078D4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <p class="edu__training-org">Microsoft Learn Certifications</p>
+                <p class="edu__training-period">May 2026 - Aug 2026</p>
+              </div>
+            </div>
+            <ul class="edu__training-list">
+              <li>Design and Manage Analytics Solutions Using Power BI</li>
+              <li>DP-080: Querying Data with Microsoft Transact-SQL</li>
+              <li>Introduction to Microsoft Azure Data Services</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- AEON Scholarship Portrait Image Card -->
+        <div class="edu__scholarship-col fade-up" style="--delay:.18s">
+          <div class="edu__scholarship-card">
+            <div class="edu__scholarship-img-wrap">
+              <img src="images/education-aeon-scholarship.jpg" alt="Do Hai Anh receiving AEON scholarship" class="edu__scholarship-img" />
+            </div>
+            <div class="edu__scholarship-caption">
+              <span class="edu__scholarship-badge">Honors &amp; Recognition</span>
+              <p class="edu__scholarship-title">AEON FTU Scholarship</p>
+              <p class="edu__scholarship-desc">Academic excellence award recognizing top scholarly achievement &amp; leadership potential</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave: shallow to mid -->
+  <div class="wave-sep wave-sep--down" aria-hidden="true">
+    <svg viewBox="0 0 1440 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,32 C480,64 960,0 1440,32 L1440,64 L0,64 Z" fill="rgba(140,207,232,0.06)"/>
+      <path d="M0,50 C360,18 1080,60 1440,40 L1440,64 L0,64 Z" fill="rgba(90,160,185,0.04)"/>
+    </svg>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <section class="section section--mid" id="experience">
+    <div class="container">
+      <span class="section-label fade-up">EXPERIENCE &amp; REAL-WORLD EXPLORATION</span>
+      <h2 class="section-title fade-up">Deep dives</h2>
+
+      <div class="exp__rows">
+
+        <!-- Item 1: FPT Telecom (Text left, contain promotional graphic right) -->
+        <div class="exp-row exp-row--fpt fade-up">
+          <div class="exp-card">
+            <div class="exp-card__stripe" style="--col:#4D9FC3"></div>
+            <div class="exp-card__head">
+              <div class="exp-card__meta">
+                <span class="exp-card__badge">Current</span>
+                <span class="exp-card__period">Jun 2026 - Present</span>
+              </div>
+              <div class="exp-card__org">
+                <div class="exp-card__org-icon" style="background:rgba(77,159,195,.12)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#4D9FC3" stroke-width="1.5" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 12h6M12 9v6"/></svg>
+                </div>
+                <div>
+                  <h3 class="exp-card__company">FPT Telecom</h3>
+                  <p class="exp-card__role">Investment planning &amp; project management intern</p>
+                </div>
+              </div>
+            </div>
+            <ul class="exp-card__list">
+              <li>Managed and processed large-scale investment and project portfolio data</li>
+              <li>Supported nationwide telecommunications infrastructure deployment for the Ministry of Finance</li>
+              <li>Coordinated across <strong>1,750 transmission channels</strong> spanning <strong>63 provincial units</strong></li>
+              <li>Maintained <strong>100% on-schedule project completion</strong> through disciplined tracking</li>
+            </ul>
+          </div>
+          <div class="exp-row__fpt-wrap">
+            <div class="exp-fpt-frame">
+              <img src="images/experience-fpt-telecom.jpg" alt="FPT Telecom internship visual" class="exp-fpt-img" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: FUWA Biotech (FUWA booth photo left, text right) -->
+        <div class="exp-row exp-row--reverse exp-row--fuwa fade-up" style="--delay:.15s">
+          <div class="exp-row__fuwa-wrap">
+            <div class="exp-fuwa-frame">
+              <img src="images/experience-fuwa-biotech.jpg" alt="FUWA Biotech exhibition booth and customer interaction" class="exp-fuwa-img" />
+            </div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-card__stripe" style="--col:#C98676"></div>
+            <div class="exp-card__head">
+              <div class="exp-card__meta">
+                <span class="exp-card__badge exp-card__badge--coral">Completed</span>
+                <span class="exp-card__period">May 2025 - Dec 2025</span>
+              </div>
+              <div class="exp-card__org">
+                <div class="exp-card__org-icon" style="background:rgba(201,134,118,.1)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#C98676" stroke-width="1.5" width="18" height="18"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
+                <div>
+                  <h3 class="exp-card__company">FUWA Biotech</h3>
+                  <p class="exp-card__role">International sales intern</p>
+                </div>
+              </div>
+            </div>
+            <ul class="exp-card__list">
+              <li>Supported global expansion through the company's Alibaba B2B platform</li>
+              <li>Conducted outbound sales outreach to <strong>100+ prospective clients</strong> in China</li>
+              <li>Contributed to <strong>10+ international orders</strong> valued over <strong>USD 15,000</strong></li>
+              <li>Facilitated commercial discussions and contract alignment with <strong>5 Chinese business partners</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 3: SweetieBoss (Text left, Primary product graphic right + Secondary Panasonic context) -->
+        <div class="exp-row exp-row--sweetieboss fade-up" style="--delay:.30s">
+          <div class="exp-card exp-card--featured">
+            <div class="exp-card__stripe" style="--col:#3F7087"></div>
+            <div class="exp-card__head">
+              <div class="exp-card__meta">
+                <span class="exp-card__badge exp-card__badge--deep">Social venture</span>
+              </div>
+              <div class="exp-card__org">
+                <div class="exp-card__org-icon" style="background:rgba(63,112,135,.1)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#3F7087" stroke-width="1.5" width="18" height="18"><path d="M4 20l8-8 4 4 8-12"/><circle cx="20" cy="6" r="2.5"/></svg>
+                </div>
+                <div>
+                  <h3 class="exp-card__company">SweetieBoss</h3>
+                  <p class="exp-card__role">Project manager - circular economy venture</p>
+                </div>
+              </div>
+            </div>
+            <ul class="exp-card__list">
+              <li>Led a <strong>10-member cross-functional project team</strong> from inception to market execution</li>
+              <li>Delivered <strong>VND 600+ million</strong> in first-year revenue through circular product lines</li>
+              <li>Created sustainable livelihoods for <strong>30+ pineapple-farming households</strong> in Thanh Hoa</li>
+              <li>Upcycled <strong>10+ tonnes of agricultural pineapple waste</strong> into eco-friendly home care products</li>
+              <li>Selected as a <strong>Panasonic Gen G Ambassador</strong> with <strong>VND 100 million</strong> grant funding</li>
+              <li>Established <strong>10+ zero-waste refill stations</strong> across retail partner locations in Hanoi</li>
+            </ul>
+            <div class="exp-card__tags">
+              <span class="chip chip--sm">Circular economy</span>
+              <span class="chip chip--sm">Sustainability</span>
+              <span class="chip chip--sm">Social impact</span>
+            </div>
+          </div>
+
+          <div class="exp-sweetieboss-visuals">
+            <!-- Top: Products Line Graphic -->
+            <div class="sweetieboss-frame sweetieboss-frame--products">
+              <div class="sweetieboss-img-wrap">
+                <img src="images/experience-sweetieboss-products.png" alt="SweetieBoss circular economy upcycled pineapple enzyme products" class="sweetieboss-img sweetieboss-img--products" />
+              </div>
+              <div class="sweetieboss-caption">SweetieBoss upcycled pineapple enzyme product line</div>
+            </div>
+
+            <!-- Bottom: Panasonic Gen G Ambassador Photo -->
+            <div class="sweetieboss-frame sweetieboss-frame--panasonic">
+              <div class="sweetieboss-img-wrap">
+                <img src="images/experience-sweetieboss-panasonic.jpg" alt="SweetieBoss team at Panasonic Gen G Ambassador summit and refill station" class="sweetieboss-img sweetieboss-img--panasonic" />
+              </div>
+              <div class="sweetieboss-caption">Panasonic Gen G Ambassador program &amp; refill initiative</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave: mid to awards -->
+  <div class="wave-sep wave-sep--awards" aria-hidden="true">
+    <svg viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,28 C720,56 1440,0 1440,28 L1440,56 L0,56 Z" fill="rgba(140,207,232,0.05)"/>
+    </svg>
+  </div>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section section--awards" id="awards">
+    <div class="container">
+      <span class="section-label section-label--light fade-up">ACHIEVEMENTS</span>
+      <h2 class="section-title section-title--light fade-up">Milestones along the current</h2>
+      <p class="section-intro section-intro--light fade-up">Each recognition gathered through effort, resilience, and growth.</p>
+
+      <div class="achieve-chapters">
+
+        <!-- Chapter 1: Economics Debate Championships (ONE Dominant Visual) -->
+        <div class="achieve-chapter achieve-chapter--debate fade-up">
+          <div class="achieve-chapter__visual">
+            <div class="achieve-dominant-frame achieve-dominant-frame--landscape">
+              <img src="images/achievements-calliope-champion.jpg" alt="Do Hai Anh on stage as Calliope Economics Debate Champion" class="achieve-dominant-img" />
+              <div class="achieve-img-caption">Calliope economics debate championship - Foreign Trade University</div>
+            </div>
+          </div>
+
+          <div class="achieve-chapter__content">
+            <div class="achieve-chapter__kicker">Chapter 01 · Debate &amp; Discourse</div>
+            <div class="achieve-chapter__list">
+              <div class="achieve-row achieve-row--champion">
+                <div class="achieve-row__accent"></div>
+                <div class="achieve-row__content">
+                  <span class="achieve-tier">CHAMPION</span>
+                  <h3 class="achieve-name">Calliope - economics debate competition</h3>
+                  <span class="achieve-year">2025</span>
+                </div>
+              </div>
+
+              <div class="achieve-row achieve-row--champion">
+                <div class="achieve-row__accent"></div>
+                <div class="achieve-row__content">
+                  <span class="achieve-tier">CHAMPION</span>
+                  <h3 class="achieve-name">Hanoi Capital debate competition</h3>
+                  <span class="achieve-year">2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 2: Enterprise & Innovation (Deliberate 2-Image Composition) -->
+        <div class="achieve-chapter achieve-chapter--reverse achieve-chapter--entrepreneurship fade-up" style="--delay:.12s">
+          <div class="achieve-chapter__content">
+            <div class="achieve-chapter__kicker">Chapter 02 · Enterprise &amp; Innovation</div>
+            <div class="achieve-chapter__list">
+              <div class="achieve-row achieve-row--champion">
+                <div class="achieve-row__accent"></div>
+                <div class="achieve-row__content">
+                  <span class="achieve-tier">CHAMPION</span>
+                  <h3 class="achieve-name">Young entrepreneurship competition</h3>
+                  <span class="achieve-year">2025</span>
+                </div>
+              </div>
+
+              <div class="achieve-row achieve-row--champion">
+                <div class="achieve-row__accent"></div>
+                <div class="achieve-row__content">
+                  <span class="achieve-tier">CHAMPION</span>
+                  <h3 class="achieve-name">Biz4Good - student entrepreneurship competition</h3>
+                  <span class="achieve-year">2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="achieve-visual-stack">
+            <div class="achieve-visual-stack__main">
+              <img src="images/achievements-young-entrepreneurship.jpg" alt="Young Entrepreneurship national competition ceremony" class="achieve-stack-img" />
+              <div class="achieve-img-caption">Young entrepreneurship · National finals</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 3: Scholarships & Recognitions (ONE Dominant Portrait Visual) -->
+        <div class="achieve-chapter achieve-chapter--recognition fade-up" style="--delay:.18s">
+          <div class="achieve-chapter__visual achieve-chapter__visual--portrait">
+            <div class="achieve-dominant-frame achieve-dominant-frame--portrait">
+              <img src="images/education-aeon-scholarship.jpg" alt="AEON FTU academic excellence scholarship ceremony" class="achieve-dominant-img" />
+              <div class="achieve-img-caption">AEON academic excellence scholarship</div>
+            </div>
+          </div>
+
+          <div class="achieve-chapter__content">
+            <div class="achieve-chapter__kicker">Chapter 03 · Scholarships &amp; Accolades</div>
+            <div class="achieve-chapter__list achieve-chapter__list--tight">
+              <div class="achieve-row achieve-row--finalist">
+                <div class="achieve-row__accent"></div>
+                <div class="achieve-row__content">
+                  <span class="achieve-tier">Top 4 Finalist</span>
+                  <h3 class="achieve-name">Economist Up competition</h3>
+                  <span class="achieve-year">2026</span>
+                </div>
+              </div>
+
+              <div class="achieve-row achieve-row--finalist">
+                <div class="achieve-row__accent"></div>
+                <div class="achieve-row__content">
+                  <span class="achieve-tier">Top 5 Ambassador</span>
+                  <h3 class="achieve-name">Panasonic Gen G Ambassador initiative</h3>
+                  <span class="achieve-year">2025</span>
+                </div>
+              </div>
+
+              <div class="achieve-row achieve-row--scholarship">
+                <div class="achieve-row__accent"></div>
+                <div class="achieve-row__content">
+                  <span class="achieve-tier">Scholarship</span>
+                  <h3 class="achieve-name">AEON FTU academic excellence scholarship</h3>
+                  <span class="achieve-year">2025 &amp; 2026</span>
+                </div>
+              </div>
+
+              <div class="achieve-row achieve-row--scholarship">
+                <div class="achieve-row__accent"></div>
+                <div class="achieve-row__content">
+                  <span class="achieve-tier">Scholarship</span>
+                  <h3 class="achieve-name">SCG Sharing the Dream scholarship</h3>
+                  <span class="achieve-year">2023</span>
+                </div>
+              </div>
+
+              <div class="achieve-row achieve-row--recognition">
+                <div class="achieve-row__accent"></div>
+                <div class="achieve-row__content">
+                  <span class="achieve-tier">Recognition</span>
+                  <h3 class="achieve-name">Sinh vien 5 tot - outstanding student, city level</h3>
+                  <span class="achieve-year">Recognition</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave: mid to deep -->
+  <div class="wave-sep wave-sep--research" aria-hidden="true">
+    <svg viewBox="0 0 1440 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,36 C480,72 960,0 1440,36 L1440,72 L0,72 Z" fill="rgba(140,207,232,0.05)"/>
+      <path d="M0,56 C360,24 1080,68 1440,48 L1440,72 L0,72 Z" fill="rgba(90,160,185,0.03)"/>
+    </svg>
+  </div>
+
+  <!-- RESEARCH -->
+  <section class="section section--deep" id="research">
+    <div class="container">
+      <span class="section-label section-label--light fade-up">RESEARCH &amp; PUBLICATIONS</span>
+      <h2 class="section-title section-title--light fade-up">Exploring the depths</h2>
+      <p class="section-intro section-intro--light fade-up">Research has helped me develop not only analytical discipline, but also a deeper appreciation for how ideas can shape policy, business, and sustainable growth.</p>
+
+      <div class="research__layout">
+        <div class="research__list">
+          <div class="pub-card fade-up">
+            <span class="pub-card__num">01</span>
+            <div class="pub-card__body">
+              <span class="pub-card__badge">International conference - 2025</span>
+              <h3 class="pub-card__title">"US foreign policy toward ASEAN under recent administrations (2017-2024): Continuities, changes and strategic implications for Vietnam."</h3>
+              <p class="pub-card__authors">Ngo, H. Q. A., Trinh, H. D., Tran, L. M., &amp; <strong>Do, H. A.</strong></p>
+              <p class="pub-card__venue">REMAP 2025 - International Conference on Regulation, Economic Management and Public Policy</p>
+              <div class="pub-card__tags">
+                <span class="chip chip--deep">Foreign policy</span>
+                <span class="chip chip--deep">ASEAN</span>
+                <span class="chip chip--deep">Vietnam</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pub-card fade-up" style="--delay:.18s">
+            <span class="pub-card__num">02</span>
+            <div class="pub-card__body">
+              <span class="pub-card__badge">Working paper - 2026</span>
+              <h3 class="pub-card__title">"The impact of energy diversification on oil &amp; gas firm performance: The moderating role of geopolitical risk."</h3>
+              <p class="pub-card__authors">Tran, V. T. H., Dang, H. H. L., Nguyen, Q. H., <strong>Do, H. A.</strong>, Vu, M. T., Nguyen, T. H. H., &amp; Do, K. H.</p>
+              <p class="pub-card__venue">Foreign Trade University Working Papers Series</p>
+              <div class="pub-card__tags">
+                <span class="chip chip--deep">Energy</span>
+                <span class="chip chip--deep">Geopolitical risk</span>
+                <span class="chip chip--deep">Econometrics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- REMAP Publication visual & Research Support Treatment -->
+        <div class="research__remap-col fade-up" style="--delay:.24s">
+          <div class="research__visual-stack">
+            <div class="research__remap-card">
+              <div class="research__pub-header">
+                <span class="research__pub-badge">Peer-Reviewed Proceedings</span>
+                <span class="research__pub-meta">REMAP 2025</span>
+              </div>
+              <img src="images/research-remap-2025.png" alt="REMAP 2025 conference proceedings publication cover" class="research__remap-img" />
+              <div class="research__remap-caption">REMAP 2025 International Conference Proceedings</div>
+            </div>
+
+            <div class="research__meta-card">
+              <div class="research__meta-head">
+                <div class="research__meta-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                </div>
+                <div>
+                  <h4 class="research__meta-title">Quantitative Econometrics &amp; Trade Policy</h4>
+                  <p class="research__meta-sub">Foreign Trade University · Academic Inquiry</p>
+                </div>
+              </div>
+              <div class="research__meta-stats">
+                <div class="research__stat-item">
+                  <span class="research__stat-num">2</span>
+                  <span class="research__stat-lbl">Papers</span>
+                </div>
+                <div class="research__stat-item">
+                  <span class="research__stat-num">GPR</span>
+                  <span class="research__stat-lbl">Index Focus</span>
+                </div>
+                <div class="research__stat-item">
+                  <span class="research__stat-num">Panel</span>
+                  <span class="research__stat-lbl">Econometrics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave: deep to activities (ascending) -->
+  <div class="wave-sep wave-sep--up" aria-hidden="true">
+    <svg viewBox="0 0 1440 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,64 C480,20 960,64 1440,32 L1440,64 L0,64 Z" fill="rgba(140,207,232,0.05)"/>
+    </svg>
+  </div>
+
+  <!-- ACTIVITIES -->
+  <section class="section section--activities" id="activities">
+    <div class="container">
+      <span class="section-label section-label--light fade-up">LEADERSHIP, COMMUNITY &amp; ACTIVITIES</span>
+      <h2 class="section-title section-title--light fade-up">Currents that shaped me</h2>
+
+      <div class="activities__editorial">
+
+        <!-- Row 1: Public speaking image left, 3 activity items right -->
+        <div class="activities__row fade-up">
+          <div class="activities__col-img activities__col-img--single">
+            <img src="images/activities-public-speaking.jpg" alt="Do Hai Anh presenting and speaking on stage" class="activities__img" />
+            <div class="activities__img-caption">Public speaking, discourse &amp; debate</div>
+          </div>
+          <div class="activities__col-list">
+            <div class="activity-line">
+              <div class="activity-line__dot"></div>
+              <div>
+                <h3 class="activity-line__title">Academic community leadership</h3>
+                <p class="activity-line__desc">Active participant and organizer within FTU's academic and student research community, contributing to knowledge-sharing events and academic discourse.</p>
+              </div>
+            </div>
+            <div class="activity-line">
+              <div class="activity-line__dot"></div>
+              <div>
+                <h3 class="activity-line__title">Student club involvement</h3>
+                <p class="activity-line__desc">Held leadership and organizing roles in student clubs, supporting event planning, member coordination, and team-building initiatives across faculties.</p>
+              </div>
+            </div>
+            <div class="activity-line">
+              <div class="activity-line__dot"></div>
+              <div>
+                <h3 class="activity-line__title">Public speaking and debate</h3>
+                <p class="activity-line__desc">Honed communication, critical thinking, and persuasion through multiple economics debate competitions - including two national-level championships.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Strategy list + quote card left, INCOTERMS Team Poster + Team Competition right -->
+        <!-- Row 2: Strategy list left, INCOTERMS Hero + Runner-up Quote & Calliope right -->
+        <div class="activities__row activities__row--reverse fade-up" style="--delay:.18s">
+          <div class="activities__col-list">
+            <div class="activity-line">
+              <div class="activity-line__dot"></div>
+              <div>
+                <h3 class="activity-line__title">Competition and strategy teams</h3>
+                <p class="activity-line__desc">Competed in business, entrepreneurship, and policy competitions at institutional and national levels, collaborating with cross-functional student teams.</p>
+              </div>
+            </div>
+            <div class="activity-line">
+              <div class="activity-line__dot"></div>
+              <div>
+                <h3 class="activity-line__title">Case analysis &amp; business modeling</h3>
+                <p class="activity-line__desc">Spearheaded rigorous quantitative analysis, market entry evaluations, and strategic business cases across diverse competitive tracks.</p>
+              </div>
+            </div>
+            <div class="activity-line">
+              <div class="activity-line__dot"></div>
+              <div>
+                <h3 class="activity-line__title">Community impact &amp; social entrepreneurship</h3>
+                <p class="activity-line__desc">Through SweetieBoss, engaged directly with farming communities in Thanh Hoa, combining sustainability with tangible social outcomes for local producers.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="activities__media-layout">
+            <!-- Top Row: Dominant INCOTERMS Hero Visual -->
+            <div class="activities__hero-card">
+              <div class="activities__hero-img-wrap">
+                <img src="images/activities-incoterms-team.jpg" alt="INCOTERMS team poster at Economist Up competition" class="activities__hero-img" />
+              </div>
+              <div class="activities__img-caption">INCOTERMS team · Economist Up</div>
+            </div>
+
+            <!-- Bottom Row: 2 Horizontal Cards Side by Side (Runner-up Quote + Calliope) -->
+            <div class="activities__sub-grid">
+              <!-- Left: Runner-up / Á quân image + quote highlight -->
+              <div class="activities__sub-card activities__sub-card--quote">
+                <div class="activities__runner-up-media">
+                  <img src="images/achievements-sweetieboss-runner-up-individual.jpg" alt="Do Hai Anh SweetieBoss runner-up recognition poster" class="activities__runner-up-img" />
+                </div>
+                <div class="activities__quote-content">
+                  <blockquote class="activities__quote-text">"Đôi khi điều đáng giá nhất không phải kết quả cuối cùng, mà là việc các bạn đã đủ can đảm để bắt đầu."</blockquote>
+                  <div class="activities__quote-author">Do Hai Anh · SweetieBoss Impact</div>
+                </div>
+              </div>
+
+              <!-- Right: Calliope / team strategy & collaboration image -->
+              <div class="activities__sub-card activities__sub-card--photo">
+                <div class="activities__calliope-img-wrap">
+                  <img src="images/activities-team-competition.jpg" alt="Student collaboration and competition teamwork" class="activities__calliope-img" />
+                </div>
+                <div class="activities__img-caption">Team strategy &amp; collaboration</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section section--gallery" id="gallery">
+    <div class="container">
+      <span class="section-label section-label--light fade-up">SELECTED HIGHLIGHTS</span>
+      <h2 class="section-title section-title--light fade-up">Waves of moments</h2>
+      <p class="section-intro section-intro--light fade-up">Snapshots from a journey in motion - competing, leading, learning, and celebrating.</p>
+
+      <div class="gallery__bento">
+        <!-- Hero dominant visual (Left, tall editorial frame ~45% width, 520px height) -->
+        <div class="gallery__bento-hero">
+          <div class="gallery__item gallery__item--hero fade-up" data-caption="Public Speaking, Debate & Keynote Address" style="--delay:.00s">
+            <img src="images/activities-public-speaking.jpg" alt="Do Hai Anh speaking and presenting on stage" class="gallery__img" />
+            <div class="gallery__overlay">
+              <span class="gallery__caption">Public Speaking &amp; Discourse</span>
+              <button class="gallery__btn" data-src="images/activities-public-speaking.jpg" aria-label="Open image: Public Speaking">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Supporting visual cluster (Right: 1 wide top + 2 compact bottom) -->
+        <div class="gallery__bento-side">
+          <div class="gallery__item gallery__item--wide fade-up" data-caption="Panasonic Gen G Ambassador Summit" style="--delay:.08s">
+            <img src="images/experience-sweetieboss-panasonic.jpg" alt="SweetieBoss team at Panasonic Gen G Ambassador program" class="gallery__img" />
+            <div class="gallery__overlay">
+              <span class="gallery__caption">Panasonic Gen G Ambassador Summit</span>
+              <button class="gallery__btn" data-src="images/experience-sweetieboss-panasonic.jpg" aria-label="Open image: Panasonic Gen G Ambassador Summit">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="gallery__bento-row">
+            <div class="gallery__item gallery__item--compact fade-up" data-caption="Fuwa Biotech - Ecological Innovation" style="--delay:.14s">
+              <img src="images/experience-fuwa-biotech.jpg" alt="Fuwa Biotech ecological production and team" class="gallery__img" />
+              <div class="gallery__overlay">
+                <span class="gallery__caption">Fuwa Biotech</span>
+                <button class="gallery__btn" data-src="images/experience-fuwa-biotech.jpg" aria-label="Open image: Fuwa Biotech">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery__item gallery__item--compact fade-up" data-caption="INCOTERMS Strategy Team - Economist Up" style="--delay:.20s">
+              <img src="images/activities-incoterms-team.jpg" alt="INCOTERMS team poster at Economist Up competition" class="gallery__img" />
+              <div class="gallery__overlay">
+                <span class="gallery__caption">INCOTERMS Team</span>
+                <button class="gallery__btn" data-src="images/activities-incoterms-team.jpg" aria-label="Open image: INCOTERMS Team">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+      <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section--skills" id="skills">
+    <div class="container">
+      <span class="section-label section-label--light fade-up">SKILLS &amp; STRENGTHS</span>
+      <h2 class="section-title section-title--light fade-up">Tools for the journey</h2>
+
+      <div class="skills__grid">
+        <div class="glass-card skill-group fade-up" style="--delay:.00s">
+          <div class="skill-group__head">
+            <div class="skill-group__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="17" height="17"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3 class="skill-group__title">Business &amp; strategy</h3>
+          </div>
+          <div class="chips">
+            <span class="chip">Market analysis</span>
+            <span class="chip">Business planning</span>
+            <span class="chip">Strategic thinking</span>
+            <span class="chip">Problem-solving</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-group fade-up" style="--delay:.08s">
+          <div class="skill-group__head">
+            <div class="skill-group__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="17" height="17"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="skill-group__title">Research &amp; analytics</h3>
+          </div>
+          <div class="chips">
+            <span class="chip">Quantitative research</span>
+            <span class="chip">Econometric thinking</span>
+            <span class="chip">Academic writing</span>
+            <span class="chip">Data analysis</span>
+            <span class="chip chip--tech">Excel</span>
+            <span class="chip chip--tech">Power BI</span>
+            <span class="chip chip--tech">SQL</span>
+            <span class="chip chip--tech">Python</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-group fade-up" style="--delay:.16s">
+          <div class="skill-group__head">
+            <div class="skill-group__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="17" height="17"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <h3 class="skill-group__title">Project management</h3>
+          </div>
+          <div class="chips">
+            <span class="chip">Agile &amp; waterfall</span>
+            <span class="chip">WBS</span>
+            <span class="chip">Scheduling</span>
+            <span class="chip">Stakeholder coordination</span>
+            <span class="chip">KPI tracking</span>
+            <span class="chip">Scope &amp; risk management</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-group fade-up" style="--delay:.24s">
+          <div class="skill-group__head">
+            <div class="skill-group__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="17" height="17"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <h3 class="skill-group__title">Communication</h3>
+          </div>
+          <div class="chips">
+            <span class="chip">Public speaking</span>
+            <span class="chip">Presentation</span>
+            <span class="chip">Team collaboration</span>
+            <span class="chip">Critical thinking</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-group fade-up" style="--delay:.32s">
+          <div class="skill-group__head">
+            <div class="skill-group__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="17" height="17"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <h3 class="skill-group__title">Languages</h3>
+          </div>
+          <div class="chips">
+            <span class="chip chip--lang">English - IELTS 7.0</span>
+            <span class="chip chip--lang">Chinese - HSK 3</span>
+            <span class="chip chip--lang">Vietnamese - native</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave: to contact -->
+  <div class="wave-sep wave-sep--contact" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="rgba(140,207,232,0.06)"/>
+      <path d="M0,62 C480,28 960,76 1440,55 L1440,80 L0,80 Z" fill="rgba(90,160,185,0.04)"/>
+    </svg>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="contact__bg" aria-hidden="true"></div>
+    <div class="contact__shaft" aria-hidden="true"></div>
+
+    <div class="container contact__content">
+      <span class="section-label section-label--light fade-up">CONTACT</span>
+      <h2 class="section-title section-title--light fade-up">Let's sail further</h2>
+      <p class="contact__tagline fade-up">I'm always open to new opportunities, meaningful collaborations, and conversations that inspire growth.</p>
+
+      <div class="contact__grid fade-up">
+        <a href="mailto:dohaianh0912@gmail.com" class="contact-card">
+          <div class="contact-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-card__text">
+            <p class="contact-card__label">Email</p>
+            <p class="contact-card__value">dohaianh0912@gmail.com</p>
+          </div>
+        </a>
+
+        <a href="tel:+84869113718" class="contact-card">
+          <div class="contact-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="20" height="20"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.3 12.29a19.79 19.79 0 01-3.07-8.67A2 2 0 013.21 1.5h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="contact-card__text">
+            <p class="contact-card__label">Phone</p>
+            <p class="contact-card__value">+84 869 113 718</p>
+          </div>
+        </a>
+
+        <div class="contact-card">
+          <div class="contact-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-card__text">
+            <p class="contact-card__label">Location</p>
+            <p class="contact-card__value">Hanoi, Vietnam</p>
+          </div>
+        </div>
+
+        <a href="https://www.linkedin.com/in/%C4%91%E1%BB%97-h%E1%BA%A3i-anh-babbb72b1/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="20" height="20"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="contact-card__text">
+            <p class="contact-card__label">LinkedIn</p>
+            <p class="contact-card__value">Connect with me</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="contact__cta fade-up">
+        <a href="mailto:dohaianh0912@gmail.com" class="btn btn--light-sea">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__poem">"Still at the beginning, yet already drawn to deeper waters."</p>
+      <p class="footer__copy">&copy; Do Hai Anh - Beyond the Reef</p>
+    </div>
+  </footer>
+
+  <!-- AUDIO -->
+  <audio id="ambientAudio" loop preload="auto">
+    <source src="audio/ocean-ambient.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- OCEAN DEPTH HUD -->
+  <div class="ocean-depth-hud" id="oceanDepthHud" aria-hidden="true">
+    <div class="depth-hud__track">
+      <div class="depth-hud__bubble"></div>
+    </div>
+    <div class="depth-hud__data">
+      <span class="depth-hud__num" id="depthNum">0m</span>
+      <span class="depth-hud__label" id="depthLabel">Sunlight Surface</span>
+    </div>
+  </div>
+
+  <!-- SOUND TOGGLE -->
+  <button class="audio-toggle" id="audioToggle" aria-label="Toggle ambient ocean sound" aria-pressed="false">
+    <div class="audio-toggle__icon">
+      <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="17" height="17"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+      <svg class="icon-playing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="17" height="17" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/><path d="M19.07 4.93a10 10 0 010 14.14"/></svg>
+      <div class="audio-bars" aria-hidden="true"><span></span><span></span><span></span></div>
+    </div>
+    <span class="audio-toggle__label" id="audioToggleLabel">Sound</span>
+  </button>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
